@@ -1,5 +1,5 @@
 # 🎯 AKUMA King Phisher - Ultimate SOC Testing Suite
-## Феня's Professional Edition для Red Team & SOC Testing
+## AKUMA Professional Edition для Red Team & SOC Testing
 
 ---
 
