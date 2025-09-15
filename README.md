@@ -1,4 +1,4 @@
-# 🎯 AKUMA King Phisher - Ultimate SOC Testing Suite
+# 🎯 King Phisher - Ultimate SOC Testing Suite
 ## AKUMA Professional Edition для Red Team & SOC Testing
 
 ---
@@ -356,16 +356,6 @@ sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 - **Original King Phisher**: https://github.com/rsmusllp/king-phisher
 - **Documentation**: https://king-phisher.readthedocs.io/
 - **Community**: https://github.com/rsmusllp/king-phisher/discussions
-
----
-
-## 📞 Support
-
-Есть вопросы? Нашел баг? Нужна помощь?
-
-1. **Issues**: [GitHub Issues](https://github.com/sweetpotatohack/AKUMA_King_Phisher/issues)
-2. **Discussions**: [GitHub Discussions](https://github.com/sweetpotatohack/AKUMA_King_Phisher/discussions)
-3. **Email**: Смотри профиль автора
 
 ---
 
